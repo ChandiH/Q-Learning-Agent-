@@ -1,7 +1,7 @@
 import gym
 from tqdm import tqdm
 import numpy as np
-import Plot_Graph
+from Graphs import Plot_Graph
 
 
 class RandomAgent:
@@ -62,7 +62,7 @@ def loop(n_episodes, n_agents):
 # For plotting metrics
 timesteps_agents, penalties_agents = loop(100, 1)
 
-Plot_Graph.Draw.subplot_line_graph(timesteps_agents, "Time Steps", penalties_agents, "Penalties", "random_agent")
+#Plot_Graph.Draw.subplot_line_graph(timesteps_agents, "Time Steps", penalties_agents, "Penalties", "random_agent")
 
-#Plot_Graph.Draw.plot_multiple_line_graph(timesteps_agents, "Time Steps", "Random Agent - Time Steps")
-#Plot_Graph.Draw.plot_multiple_line_graph(penalties_agents, "Penalties", "Random Agent - Penalties")
+Plot_Graph.Draw.plot_multiple_line_graph(timesteps_agents, "Time Steps", "Random Agent - Time Steps")
+Plot_Graph.Draw.plot_multiple_line_graph(penalties_agents, "Penalties", "Random Agent - Penalties")
